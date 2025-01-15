@@ -1,0 +1,35 @@
+{
+    "name": "noopstudios/laravel-vat",
+    "description": "Laravel VAT package",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Noopstudios\\LaravelVat\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Noopstudios",
+            "email": "geral@noop.pt"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0",
+        "ibericode/vat": "^2.0",
+        "ext-soap": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Noopstudios\\LaravelVat\\LaravelVatServiceProvider"
+            ],
+            "aliases": {
+                "VatValidator": "Noopstudios\\LaravelVat\\Facades\\VatValidator"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

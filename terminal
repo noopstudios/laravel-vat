@@ -1,0 +1,1 @@
+composer create-package your-vendor/laravel-vat-validator 
