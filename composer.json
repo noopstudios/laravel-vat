@@ -8,6 +8,11 @@
             "Noopstudios\\LaravelVat\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Noopstudios\\LaravelVat\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Noopstudios",
@@ -31,5 +36,9 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "phpunit/phpunit": "^10.0"
+    }
 }
