@@ -12,10 +12,6 @@ class LaravelVatServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(
-            __DIR__.'/../config/vat.php', 'vat'
-        );
-
         // Register the VatValidator service
         $this->app->bind('vat-validator', function ($app) {
             return new VatValidator();
@@ -27,8 +23,6 @@ class LaravelVatServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->publishes([
-            __DIR__.'/../config/vat.php' => config_path('vat.php'),
-        ], 'vat-config');
+        // Empty method as we don't need to publish any configs
     }
 } 
