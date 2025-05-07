@@ -37,7 +37,11 @@ class TestCase extends Orchestra
      */
     protected function defineEnvironment($app): void
     {
-        // Define environment setup
+        // Existing code...
+        
+        $app['config']->set('vat.api_endpoint', 'https://example.com/api');
+        $app['config']->set('vat.timeout', 30);
+        // ... outras configurações específicas do VAT
     }
 
     /**
@@ -54,6 +58,10 @@ class TestCase extends Orchestra
      */
     protected function createSampleData()
     {
-        // Code to create sample data for tests
+        return [
+            'valid_vat' => 'PT123456789',
+            'invalid_vat' => 'PT999999999',
+            // ... outros dados de exemplo
+        ];
     }
 }
